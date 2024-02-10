@@ -1,10 +1,12 @@
 <script>
 import { RouterView } from 'vue-router'
 import Navbar from './components/Navbar.vue'
+import Footer from './components/Footer.vue'
 
 export default {
   components: {
-    Navbar
+    Navbar,
+    Footer
   },
 
   data() {
@@ -22,6 +24,7 @@ export default {
     <div>
       <RouterView />
     </div>
+    <Footer />
   </div>
 </template>
 
@@ -35,7 +38,8 @@ export default {
 
 .main-container {
   margin: 50px;
-  min-height: 250px;
+  min-height: 150px;
+  margin-bottom: 0px;
 }
 
 h1 {
@@ -43,5 +47,13 @@ h1 {
   font-size: 72px;
   margin-bottom: 30px;
   color: #222;
+}
+
+h2 {
+  text-align: center;
+  font-size: 45px;
+  color: #222;
+  border-bottom: 4px solid #fcba03;
+  padding-bottom: 30px;
 }
 </style>
