@@ -1,6 +1,8 @@
 <script>
+import Message from './Message.vue'
+
 export default {
-  name: 'BurguerForm',
+  name: 'BurgerForm',
 
   data() {
     return {
@@ -19,62 +21,68 @@ export default {
   },
   methods: {
     async getIngredientes() {
-      const req = await fetch('http://localhost:3000/ingredientes')
-      const data = await req.json()
-      this.paes = data.paes
-      this.carnes = data.carnes
-      this.molhos = data.molhos
-      this.opcionaisData = data.opcionais
+      try {
+        const req = await fetch('http://localhost:3000/ingredientes')
+        const data = await req.json()
+        this.paes = data.paes
+        this.carnes = data.carnes
+        this.molhos = data.molhos
+        this.opcionaisData = data.opcionais
+      } catch (error) {
+        console.error('Erro ao obter ingredientes:', error)
+      }
     },
 
     async createBurguer(e) {
-      e.preventDefault()
+      try {
+        e.preventDefault()
 
-      const data = {
-        nome: this.nome,
-        carne: this.carne,
-        pao: this.pao,
-        molho: this.molho,
-        opcionais: Array.from(this.opcionais),
-        status: 'Solicitado'
+        const data = {
+          nome: this.nome,
+          carne: this.carne,
+          pao: this.pao,
+          molho: this.molho,
+          opcionais: Array.from(this.opcionais),
+          status: 'Solicitado'
+        }
+
+        const dataJson = JSON.stringify(data)
+
+        const req = await fetch('http://localhost:3000/burgers', {
+          method: 'POST',
+          body: dataJson
+        })
+
+        const res = await req.json()
+
+        this.msg = `Pedido nº${res.id} realizado com sucesso!`
+
+        setTimeout(() => {
+          this.msg = ''
+          this.nome = ''
+          this.carne = ''
+          this.pao = ''
+          this.molho = ''
+          this.opcionais = []
+        }, 3000)
+      } catch (error) {
+        console.error('Erro ao criar hambúrguer:', error)
       }
-
-      const dataJson = JSON.stringify(data)
-      console.log(dataJson)
-
-      const req = await fetch('http://localhost:3000/burgers', {
-        method: 'POST',
-        body: dataJson
-      })
-
-      const res = await req.json()
-
-      this.msg = `Pedido nº${res.id} realizado com sucesso!`
-
-      setTimeout(
-        () => (
-          (this.msg = ''),
-          (this.nome = ''),
-          (this.carne = ''),
-          (this.pao = ''),
-          (this.molho = ''),
-          (this.opcionais = '')
-        ),
-        3000
-      )
     }
   },
   mounted() {
     this.getIngredientes()
   },
-  components: {}
+  components: {
+    Message
+  }
 }
 </script>
 
 <template>
   <div>
     <div>
-      <form id="burguer-form" @submit="createBurger">
+      <form id="burguer-form" @submit="createBurguer">
         <div class="input-container">
           <label id="opcionais-title" for="name">Nome do Cliente</label>
           <input type="text" id="nome" name="nome" v-model="nome" placeholder="Digite o seu nome" />
