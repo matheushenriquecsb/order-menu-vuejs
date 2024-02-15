@@ -80,6 +80,7 @@ export default {
 </script>
 
 <template>
+  <Message :msg="msg" v-show="msg" />
   <div>
     <div>
       <form id="burguer-form" @submit="createBurguer">

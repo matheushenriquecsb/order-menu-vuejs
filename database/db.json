@@ -97,34 +97,15 @@
   ],
   "burgers": [
     {
-      "id": "d9db",
-      "nome": "test",
-      "carne": "Alcatra",
-      "pao": "3 Queijos",
-      "molho": "Chipotle",
-      "opcionais": [
-        "Bacon"
-      ],
-      "status": "Solicitado"
-    },
-    {
-      "id": "b966",
-      "nome": "",
-      "carne": "",
-      "pao": "",
-      "molho": "",
-      "opcionais": [],
-      "status": "Solicitado"
-    },
-    {
-      "id": "3baf",
-      "nome": "sdsd",
-      "carne": "Alcatra",
+      "id": "ebac",
+      "nome": "Matheus",
+      "carne": "Picanha",
       "pao": "Italiano Branco",
       "molho": "Chipotle",
       "opcionais": [
         "Bacon",
-        "Salame"
+        "Cheddar",
+        "Tomate"
       ],
       "status": "Solicitado"
     }

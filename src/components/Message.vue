@@ -1,7 +1,6 @@
 <template>
   <div class="message-container">
     <p>{{ msg }}</p>
-    <span>Message</span>
   </div>
 </template>
 
