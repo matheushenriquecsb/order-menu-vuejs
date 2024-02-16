@@ -15,7 +15,7 @@ export default {
   <div>
     <Banner />
     <div class="main-container">
-      <h2 class="title">Escolha os Ingredientes</h2>
+      <h2 class="title">Monte Seu Burguer</h2>
     </div>
     <BurguerForm />
   </div>

@@ -95,19 +95,5 @@
       "tipo": "Finalizado"
     }
   ],
-  "burgers": [
-    {
-      "id": "ebac",
-      "nome": "Matheus",
-      "carne": "Picanha",
-      "pao": "Italiano Branco",
-      "molho": "Chipotle",
-      "opcionais": [
-        "Bacon",
-        "Cheddar",
-        "Tomate"
-      ],
-      "status": "Solicitado"
-    }
-  ]
+  "burgers": []
 }

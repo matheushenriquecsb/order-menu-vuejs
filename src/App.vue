@@ -30,7 +30,7 @@ export default {
 
 <style>
 * {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Nunito', sans-serif;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
