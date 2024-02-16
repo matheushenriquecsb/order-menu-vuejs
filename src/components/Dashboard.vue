@@ -3,7 +3,7 @@
   <div id="burger-table" v-if="burgers">
     <div>
       <div id="burger-table-heading">
-        <div class="order-id">#:</div>
+        <div class="order-id">id:</div>
         <div>Cliente:</div>
         <div>Pão:</div>
         <div>Carne:</div>
@@ -65,7 +65,6 @@ export default {
 
       this.burgers = data
 
-      // Resgata os status de pedidos
       this.getStatus()
     },
     async getStatus() {

@@ -6,13 +6,13 @@ export default {
 
 <template>
   <div id="footer">
-    <p>Make Your Burguer &copy; 2024</p>
+    <div><p>Make Your Burguer &copy; 2024</p></div>
   </div>
 </template>
 
 <style scoped>
 #footer {
-  height: 200px;
+  height: 120px;
   background-color: #222;
   border-top: 4px solid #111;
   color: #fcba03;

@@ -6,7 +6,7 @@ export default {
 
 <template>
   <div id="main-banner">
-    <h1>Monte Seu Burguer</h1>
+    <h1 class="title-banner">King's Burguer</h1>
   </div>
 </template>
 
@@ -26,5 +26,10 @@ export default {
   text-align: center;
   font-size: 60px;
   padding: 20px 40px;
+}
+
+.title-banner {
+  margin-left: 60px;
+  font-weight: 800;
 }
 </style>

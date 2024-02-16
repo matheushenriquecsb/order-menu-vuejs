@@ -12,7 +12,7 @@ export default {
         <img id="logo" :src="logo" :alt="alt" />
       </RouterLink>
       <RouterLink to="/">Home</RouterLink>
-      <RouterLink to="/order">Pedidos</RouterLink>
+      <RouterLink class="order-title" to="/order">Pedidos</RouterLink>
     </div>
   </div>
 </template>
@@ -49,5 +49,10 @@ export default {
 
 #nav a:hover {
   color: #fff;
+}
+
+.order-title {
+  border-left: 4px solid #fcba03;
+  padding: 5px 20px;
 }
 </style>

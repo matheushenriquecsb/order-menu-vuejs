@@ -85,29 +85,29 @@ export default {
     <div>
       <form id="burguer-form" @submit="createBurguer">
         <div class="input-container">
-          <label id="opcionais-title" for="name">Nome do Cliente</label>
-          <input type="text" id="nome" name="nome" v-model="nome" placeholder="Digite o seu nome" />
+          <label id="opcionais-title" for="name">Digite seu nome</label>
+          <input type="text" id="nome" name="nome" v-model="nome" placeholder="Insira seu nome" />
         </div>
         <div class="input-container">
-          <label for="pao">Escolha o pão:</label>
+          <label for="pao">Selecione o pão:</label>
           <select name="pao" id="pao" v-model="pao">
-            <option value="">Selecione o seu pão</option>
+            <option value="">Escolha o pão</option>
             <option v-for="pao in paes" :key="pao.id" :value="pao.tipo">{{ pao.tipo }}</option>
           </select>
         </div>
         <div class="input-container">
-          <label for="carnes">Escolha a carne:</label>
-          <select name="carnes" id="carnes" v-model="carne">
-            <option value="">Selecione o tipo de carne</option>
+          <label for="carnes">Selecione a carne:</label>
+          <select class="teste" name="carnes" id="carnes" v-model="carne">
+            <option value="">Escolha a carne</option>
             <option v-for="carne in carnes" :key="carne.id" :value="carne.tipo">
               {{ carne.tipo }}
             </option>
           </select>
         </div>
         <div class="input-container">
-          <label for="molho">Escolha o molho:</label>
+          <label for="molho">Selecione o molho:</label>
           <select name="molho" id="molho" v-model="molho">
-            <option value="">Selecione o tipo de molhos</option>
+            <option value="">Escolha o molho</option>
             <option v-for="molho in molhos" :key="molho.id" :value="molho.tipo">
               {{ molho.tipo }}
             </option>
@@ -187,10 +187,11 @@ select {
   color: #fcba03;
   font-weight: bold;
   border: 2px solid #222;
-  padding: 10px;
+  padding: 20px;
   font-size: 16px;
   margin: 0 auto;
   cursor: pointer;
+  justify-content: center;
   transition: 0.5s;
 }
 
