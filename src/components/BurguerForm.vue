@@ -22,7 +22,7 @@ export default {
   methods: {
     async getIngredientes() {
       try {
-        const req = await fetch('http://localhost:3000/ingredientes')
+        const req = await fetch('https://order-menu-vuejs-1.onrender.com/ingredientes')
         const data = await req.json()
         this.paes = data.paes
         this.carnes = data.carnes
@@ -48,7 +48,7 @@ export default {
 
         const dataJson = JSON.stringify(data)
 
-        const req = await fetch('http://localhost:3000/burgers', {
+        const req = await fetch('https://order-menu-vuejs-1.onrender.com/burgers', {
           method: 'POST',
           body: dataJson
         })
