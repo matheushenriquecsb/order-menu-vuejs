@@ -1,35 +1,47 @@
-# order-menu
+## King's Burguer
 
-This template should help get you started developing with Vue 3 in Vite.
+https://burguer-order-menu.netlify.app
+ 
 
-## Recommended IDE Setup
+<hr>
+ 
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+### Tech Stacks
 
-## Customize configuration
+[![Vue](https://img.shields.io/badge/-VueJS-333333?style=flat&logo=vuedotjs)](https://vuejs.org)
+[![CSS3](https://img.shields.io/badge/-CSS3-333333?style=flat&logo=css3&logoColor=blue)](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
+[![CSS3](https://img.shields.io/badge/-VSCode-333333?style=flat&logo=visualstudiocode&logoColor=blue)](https://https://code.visualstudio.com) 
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+<hr>
+ 
+## Instalação
 
-## Project Setup
+### 1. Clone o repositório
 
-```sh
+```bash
+git clone https://github.com/matheushenriquecsb/order-menu-vuejs
+```
+
+### 2. Acesse o diretório
+
+```bash
+cd order-menu-vuejs
+``` 
+
+### 3. Instalando dependências
+
+```bash
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### 4. Rode a aplicação
 
-```sh
+```bash
 npm run dev
 ```
 
-### Compile and Minify for Production
+### 5. Acesse a aplicação
 
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+```bash
+http://localhost:5173
+``` 
